@@ -1,70 +1,42 @@
-# Getting Started with Create React App
+Blog to support the Phase 3 project (see below for details) I built for my Software engineering course.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Phase 3 Project Guidelines
 
-## Available Scripts
+## Learning Goals
 
-In the project directory, you can run:
+- Build a web basic API with Sinatra and Active Record to support a React
+  frontend
 
-### `npm start`
+## Introduction
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Congrats on getting through all the material for Phase 3! Now's the time to put
+it all together and build something from scratch to reinforce what you know and
+expand your horizons.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+The focus of this project is **building a Sinatra API backend** that uses
+**Active Record** to access and persist data in a database, which will be used
+by a separate **React frontend** that interacts with the database via the API.
 
-### `npm test`
+## Requirements
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+For this project, you must:
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Use Active Record to interact with a database.
+- Have at least two models with a one-to-many relationship.
+- At a minimum, set up the following API routes in Sinatra:
+  - create and read actions for both models
+  - full CRUD capability for one of the models
+- Build a separate React frontend application that interacts with the API to
+  perform CRUD actions.
+- Implement proper front end state management. You should be updating state using a
+  setState function after receiving your response from a POST, PATCH, or DELETE 
+  request. You should NOT be relying on a GET request to update state. 
+- Use good OO design patterns. You should have separate classes for each of your
+  models, and create instance and class methods as necessary. 
+- Routes in your application (both client side and back end) should follow RESTful
+  conventions.
+- Use your back end optimally. Pass JSON for related associations to the front 
+  end from the back end. You should use active record methods in your controller to grab
+  the needed data from your database and provide as JSON to the front end. You
+  should NOT be relying on filtering front end state or a separate fetch request to
+  retrieve related data.
